@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+public/
+comic-cache.json
+.DS_Store
+*.sw?
