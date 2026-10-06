@@ -2,8 +2,7 @@ name: Daily comics
 
 on:
   schedule:
-    - cron: "0 5 * * *" # Daily at 5 AM Pacific / 8 AM Eastern; runs may be delayed
-      timezone: "America/Los_Angeles"
+    - cron: "0 12 * * *" # Daily at 12:00 UTC (8 AM EDT / 7 AM EST)
   workflow_dispatch:
 
 permissions:
