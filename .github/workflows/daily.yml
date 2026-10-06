@@ -2,7 +2,7 @@ name: Daily comics
 
 on:
   schedule:
-    - cron: "0 12 * * *" # Daily at 12:00 UTC (8 AM EDT / 7 AM EST)
+    - cron: "47 11 * * *" # Daily at 11:47 UTC (7:47 AM EDT / 6:47 AM EST)
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - uses: actions/checkout@v4
 
@@ -41,7 +41,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
