@@ -2,7 +2,7 @@ name: Daily comics
 
 on:
   schedule:
-    - cron: "47 11 * * *" # Daily at 11:47 UTC (7:47 AM EDT / 6:47 AM EST)
+    - cron: "47 5 * * *" # Daily at 05:47 UTC, six hours earlier to offset observed scheduling delays
   workflow_dispatch:
 
 permissions:
